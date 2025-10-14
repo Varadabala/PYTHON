@@ -1,0 +1,48 @@
+#1. Theory: Explain what a hash value is. Why are lists unhashable? What makes a type hashable? How does this relate to dictionary keys?
+
+
+🧠 What is a Hash Value?
+
+A hash value is a unique fixed-size integer (usually returned by the hash() function) that represents an object’s data content.
+It is used internally by Python in hash tables, such as dictionaries and sets, to quickly locate data.
+
+Example:
+
+print(hash("Hello"))   # → some integer like 123456789
+
+🚫 Why Are Lists Unhashable?
+
+Lists are mutable → their contents can change.
+
+If their contents change, the hash value would also change.
+
+This would break dictionary or set behavior, which relies on consistent hashes.
+
+Hence:
+
+hash([1, 2, 3])   # ❌ TypeError: unhashable type: 'list'
+
+✅ What Makes a Type Hashable?
+
+A type is hashable if:
+
+It has a __hash__() method that returns an integer.
+
+Its value never changes during its lifetime (immutable).
+
+It can be compared with other objects via __eq__().
+
+➡️ Examples of hashable types:
+
+int, float, str, tuple (if it only contains hashable elements).
+
+🔑 Relation to Dictionary Keys
+
+Dictionary keys must be unique and hashable.
+
+Python uses the hash value of the key to store and retrieve values efficiently.
+
+Example:
+
+d = {"name": "Alice", "age": 25}
+print(hash("name"))  # Works because string is hashable
