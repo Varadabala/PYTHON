@@ -11,5 +11,14 @@ for i in range(1,n+1):
     dict[i] = fact    
 print(dict)
 
+#another method
+a = 1
+for i in range(1,n+1):
+    a = a*i
+    dict[i] = a
+print(dict) 
+
+
 #output -- Enter the number : 5
+
 #{1: 1, 2: 2, 3: 6, 4: 24, 5: 120}
