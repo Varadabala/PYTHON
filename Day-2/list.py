@@ -25,13 +25,13 @@ Enter a list of elements : 1 2 3 1 3 2
 
 
 
-"""
-def even_odd(n):
-    if n%2==0:
-        return n
-    else:
-        return "odd"
-a=[1,2,3,4,5,6,7,8]
-b=list(map(even_odd,a))
-print(b)
-"""
+user_input = input("Enter list elements separated by spaces: ")
+lst = user_input.split()
+
+duplicates = set()   # to store duplicates
+for i in lst:
+    if lst.count(i) > 1:
+        duplicates.add(i)
+
+print("Original list:", lst)
+print("Duplicates as sets : ",duplicates)
