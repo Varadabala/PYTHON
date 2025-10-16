@@ -29,4 +29,17 @@ find_sum,max_num,min_num = combine_func(numbers)
 #numbers = list(map(int,input().split()))
 print("Sum = ",find_sum(numbers))
 print("Max Value = ",max_num(numbers))
+
 print("Min Value = ",min_num(numbers))
+
+
+
+"""
+output 
+
+Sum =  15
+Max Value =  5
+Min Value =  1
+
+
+"""
