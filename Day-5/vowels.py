@@ -24,3 +24,13 @@ def vowels_count(item):
 
 item = input("Enter a string : ")
 print("Vowels-count = ",vowels_count(item))
+
+"""
+output 
+Enter a string : Mahendra Singh Dhoni
+Count of vowels =  6
+Enter a string : aeiouAEIOU          
+Vowels-count =  10
+
+"""
+
