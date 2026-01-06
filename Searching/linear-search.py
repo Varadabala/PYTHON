@@ -3,11 +3,11 @@
 """
 Algorithm: Linear Search
 
-Start
-Input array A and search key key
-Compare key with each element of A sequentially
-If a match is found, print Found and exit
-Else, after full traversal, print Not Found and stop
+Start from the first element of the list.
+Compare the current element with the key.
+If it matches, return the index (or position).
+If not, move to the next element.
+If the end is reached, element is not found.
 """
 
 
@@ -32,6 +32,25 @@ else:
 
 
 #Linear searchusing Funtion with return type
+
+def linear_search(arr, key):
+    for i in range(len(arr)):
+        if arr[i] == key:
+            return i
+    return -1
+
+
+# Driver code
+arr = [5, 8, 2, 9, 1, 7]
+key = 9
+
+result = linear_search(arr, key)
+
+if result != -1:
+    print("Element found at index", result)
+else:
+    print("Element not found")
+
 
 
 """
