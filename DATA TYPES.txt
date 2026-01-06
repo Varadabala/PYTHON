@@ -1,0 +1,611 @@
+DATA TYPES
+
+Data types with their methods  
+
+1)Numeric data types
+
+i) Integer
+a = 10
+b = 3
+
+print(a + b)
+print(a - b)
+print(a * b)
+print(a // b)   # integer division
+print(a % b)    # remainder
+
+ii)Float
+
+x = 12.5
+y = 2.0
+
+print(x + y)
+print(x / y)
+print(round(x))     # rounds to nearest integer
+print(type(x))
+
+o/p : 
+
+
+iii) complex --> real part + imaginary part(j)
+
+a = 2 + 3j
+b = complex(4, 5)
+
+print(a)
+print(b)
+print(type(a))
+
+o/p : 
+(2+3j)
+(4+5j)
+<class 'complex'>
+
+2)Sequential Data Types
+
+i) Strings : 
+A string is a sequence of characters enclosed in:
+Single quotes ' '
+Double quotes " "
+Triple quotes ''' ''' or """ """
+
+
+🐟 STRING METHODS
+
+s = "Python Programming"
+
+1️⃣ print(s.upper())          # PYTHON PROGRAMMING
+2️⃣ print(s.lower())          # python programming
+3️⃣ print(s.title())          # Python Programming
+4️⃣ print(s.capitalize())     # Python programming
+
+
+s = "python123"
+ 
+5️⃣ print(s.isalpha())       #False
+6️⃣ print(s.isdigit())       #False
+7️⃣print(s.isalnum())       #True
+
+s = "   "
+8️⃣ print(s.isspace())        #True
+9️⃣ print(s.startswith("py")) #True
+🔟 print(s.endswith("on"))   #False
+      
+
+s = "banana"
+
+1️⃣1️⃣ print(s.count('a'))           # 3
+1️⃣2️⃣ print(s.replace('a', 'o'))    #bonono
+1️⃣3️⃣ print(len(s))                 #6
+
+1️⃣4️⃣. find()
+
+Returns index of first occurrence
+Returns -1 if not found
+
+s = "python"
+print(s.find('t'))
+print(s.find('z'))
+
+
+1️⃣5️⃣. index()
+
+Same as find() but gives error if not found
+
+s = "python"
+print(s.index('h'))
+
+❌ Error if character not found
+
+1️⃣6️⃣.strip()
+
+Removes spaces from both sides
+
+s = "  python  "
+print(s.strip())
+
+
+Output: python
+
+1️⃣7️⃣.lstrip() and rstrip()
+
+Removes spaces from left or right
+
+s = "  python  "
+print(s.lstrip())
+print(s.rstrip())
+
+1️⃣8️⃣. split()
+
+Splits string into list
+
+s = "python is easy"
+print(s.split())
+
+
+Output:
+
+['python', 'is', 'easy']
+
+1️⃣9️⃣. join()
+
+Joins list elements into string
+
+l = ['python', 'is', 'easy']
+print(" ".join(l))
+
+
+Output:
+
+python is easy
+
+
+ii)Lists:
+📌 What is a List?
+
+A list is an ordered, mutable collection of elements.
+
+✔ Can store different data types
+✔ Allows duplicate values
+✔ Uses square brackets [ ]
+
+COMPLETE LIST OF LIST METHODS
+
+Python list has 11 built-in methods.
+
+1️⃣ append(x)
+
+Adds one element at the end.
+
+l = [1, 2]
+l.append(3)
+print(l)
+
+
+Output:
+
+[1, 2, 3]
+
+2️⃣ extend(iterable)
+
+Adds multiple elements to the list.
+
+l = [1, 2]
+l.extend([3, 4])
+print(l)
+
+
+Output:
+
+[1, 2, 3, 4]
+
+3️⃣ insert(index, x)
+
+Inserts element at a specific position.
+
+l = [1, 3]
+l.insert(1, 2)
+print(l)
+
+
+Output:
+
+[1, 2, 3]
+
+4️⃣ remove(x)
+
+Removes first occurrence of value.
+
+l = [1, 2, 3]
+l.remove(2)
+print(l)
+
+
+❌ Error if element not found.
+
+5️⃣ pop([index])
+
+Removes element at index
+(Default: last element)
+
+l = [10, 20, 30]
+l.pop()
+print(l)
+
+
+Output:
+
+[10, 20]
+
+6️⃣ clear()
+
+Removes all elements.
+
+l = [1, 2, 3]
+l.clear()
+print(l)
+
+
+Output:
+
+[]
+
+7️⃣ index(x)
+
+Returns index of element.
+
+l = [10, 20, 30]
+print(l.index(20))
+
+
+Output:
+
+1
+
+
+❌ Error if not found.
+
+8️⃣ count(x)
+
+Counts occurrences of element.
+
+l = [1, 2, 2, 3]
+print(l.count(2))
+
+
+Output:
+
+2
+
+9️⃣ sort()
+
+Sorts list in ascending order.
+
+l = [5, 3, 1]
+l.sort()
+print(l)
+
+
+Output:
+
+[1, 3, 5]
+
+🔟 reverse()
+
+Reverses list order.
+
+l = [1, 2, 3]
+l.reverse()
+print(l)
+
+
+Output:
+
+[3, 2, 1]
+
+1️⃣1️⃣ copy()
+
+Returns a shallow copy.
+
+l1 = [1, 2, 3]
+l2 = l1.copy()
+print(l2)
+
+
+iii)TUPLE
+
+📌 What is a Tuple?
+
+A tuple is an ordered, immutable collection of elements.
+
+✔ Uses parentheses ( )
+✔ Allows duplicate values
+✔ Faster than list
+❌ Cannot be modified (no add/remove)
+
+Example
+t = (10, 20, 30, 20)
+
+🔹 TUPLE METHODS (ONLY 2)
+1️⃣ count(x)
+
+Returns number of occurrences of an element.
+
+Program
+t = (10, 20, 30, 20, 20)
+print(t.count(20))
+
+Output:3
+
+2️⃣ index(x)
+
+Returns index of first occurrence of an element.
+
+Program
+t = (10, 20, 30, 20)
+print(t.index(30))
+
+Output:2
+
+❌ Error if element not found.
+
+
+3)Non-Sequential Elements
+
+SET (set) DATA TYPE IN PYTHON
+📌 What is a Set?
+
+A set is an unordered collection of unique elements.
+
+✔ No duplicate values
+✔ Mutable
+✔ Uses { }
+❌ No indexing / slicing
+
+Example
+s = {1, 2, 3, 4}
+
+🔹 ALL SET METHODS (IMPORTANT)
+1️⃣ add(x)
+
+Adds one element to the set.
+
+s = {1, 2}
+s.add(3)
+print(s)
+
+2️⃣ update(iterable)
+
+Adds multiple elements.
+
+s = {1, 2}
+s.update([3, 4])
+print(s)
+
+3️⃣ remove(x)
+
+Removes element.
+❌ Error if not present.
+
+s = {1, 2, 3}
+s.remove(2)
+print(s)
+
+4️⃣ discard(x)
+
+Removes element.
+✔ No error if not present.
+
+s = {1, 2, 3}
+s.discard(5)
+print(s)
+
+5️⃣ pop()
+
+Removes random element.
+
+s = {10, 20, 30}
+s.pop()
+print(s)
+
+6️⃣ clear()
+
+Removes all elements.
+
+s = {1, 2, 3}
+s.clear()
+print(s)
+
+7️⃣ copy()
+
+Returns a copy of the set.
+
+s1 = {1, 2}
+s2 = s1.copy()
+print(s2)
+
+🔹 SET MATHEMATICAL METHODS
+8️⃣ union()
+
+Returns union of sets.
+
+a = {1, 2}
+b = {2, 3}
+print(a.union(b))
+
+9️⃣ intersection()
+
+Common elements.
+
+print(a.intersection(b))
+
+🔟 difference()
+
+Elements in first set only.
+
+print(a.difference(b))
+
+1️⃣1️⃣ symmetric_difference()
+
+Elements in either, but not both.
+
+print(a.symmetric_difference(b))
+
+🔹 RELATIONSHIP METHODS
+1️⃣2️⃣ issubset()
+
+Checks subset.
+
+a = {1, 2}
+b = {1, 2, 3}
+print(a.issubset(b))
+
+1️⃣3️⃣ issuperset()
+
+Checks superset.
+
+print(b.issuperset(a))
+
+1️⃣4️⃣ isdisjoint()
+
+Checks if no common elements.
+
+x = {1, 2}
+y = {3, 4}
+print(x.isdisjoint(y))
+
+
+
+DICTIONARY (dict) DATA TYPE IN PYTHON
+📌 What is a Dictionary?
+
+A dictionary stores data in key : value pairs.
+
+✔ Keys are unique
+✔ Values can be duplicated
+✔ Mutable
+✔ Uses { }
+
+Example
+d = {"roll": 101, "name": "Ravi", "marks": 85}
+
+🔹 ALL DICTIONARY METHODS (COMPLETE LIST)
+
+Python dictionary has 11 important methods.
+
+1️⃣ keys()
+
+Returns all keys.
+
+d = {"a": 10, "b": 20}
+print(d.keys())
+
+
+Output:
+
+dict_keys(['a', 'b'])
+
+2️⃣ values()
+
+Returns all values.
+
+print(d.values())
+
+
+Output:
+
+dict_values([10, 20])
+
+3️⃣ items()
+
+Returns key–value pairs.
+
+print(d.items())
+
+
+Output:
+
+dict_items([('a', 10), ('b', 20)])
+
+4️⃣ get(key)
+
+Returns value of key.
+✔ No error if key not found.
+
+d = {"a": 10}
+print(d.get("a"))
+print(d.get("b"))
+
+
+Output:
+
+10
+None
+
+5️⃣ update()
+
+Adds or updates key–value pairs.
+
+d = {"a": 10}
+d.update({"b": 20})
+print(d)
+
+
+Output:
+
+{'a': 10, 'b': 20}
+
+6️⃣ pop(key)
+
+Removes key and returns its value.
+
+d = {"a": 10, "b": 20}
+d.pop("a")
+print(d)
+
+
+Output:
+
+{'b': 20}
+
+
+❌ Error if key not found.
+
+7️⃣ popitem()
+
+Removes last inserted key–value pair.
+
+d = {"a": 10, "b": 20}
+d.popitem()
+print(d)
+
+8️⃣ clear()
+
+Removes all items.
+
+d = {"a": 10}
+d.clear()
+print(d)
+
+
+Output:
+
+{}
+
+9️⃣ copy()
+
+Returns a shallow copy.
+
+d1 = {"a": 10}
+d2 = d1.copy()
+print(d2)
+
+🔟 setdefault(key, value)
+
+Returns value if key exists;
+else inserts key with given value.
+
+d = {"a": 10}
+d.setdefault("b", 20)
+print(d)
+
+
+Output:
+
+{'a': 10, 'b': 20}
+
+1️⃣1️⃣ fromkeys(keys, value)
+
+Creates dictionary from keys.
+
+keys = ["a", "b", "c"]
+d = dict.fromkeys(keys, 0)
+print(d)
+
+
+Output:
+
+{'a': 0, 'b': 0, 'c': 0}
+
+
+
